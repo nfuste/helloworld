@@ -6,5 +6,7 @@ import (
 )
 
 func main() {
-	fmt.Println("Hello World", "The time is", time.Now())
+	t := time.Now()
+	fmt.Println("Hello World", "The time is", t.Format("3:04PM"))
+
 }
