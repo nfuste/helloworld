@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"math"
+	"math/rand"
 	"time"
 )
 
@@ -16,12 +17,17 @@ func saytime() {
 }
 
 func saysqrt() {
-	fmt.Println("The square root of 4 is", math.Sqrt(4))
+	z := 4.0
+	fmt.Println("The square root of 4 is", math.Sqrt(z))
+}
+
+func sayrandomnumber() {
+	fmt.Println("A number from 1 to 100:", rand.Intn(100))
 }
 
 func main() {
 	sayhello()
 	saytime()
 	saysqrt()
-
+	sayrandomnumber()
 }
