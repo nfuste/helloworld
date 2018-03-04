@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"math"
 	"math/rand"
+	"net/http"
 	"time"
 )
 
@@ -34,10 +35,21 @@ func saysum() {
 	fmt.Println("La suma de", num1, "y", num2, "da", add(num1, num2)) // Te dice los dos valores a sumar y los suma
 }
 
+func indexHandler(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, "Whoa, Go is neat!")
+}
+
+func aboutHandler(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, "Created by Nicky Knights")
+}
+
 func main() {
 	sayhello()
 	saytime()
 	saysqrt()
 	sayrandomnumber()
 	saysum()
+	http.HandleFunc("/", indexHandler)
+	http.HandleFunc("/about", aboutHandler)
+	http.ListenAndServe(":8000", nil)
 }
