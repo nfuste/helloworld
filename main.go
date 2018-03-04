@@ -25,9 +25,20 @@ func sayrandomnumber() {
 	fmt.Println("A number from 1 to 100:", rand.Intn(100))
 }
 
+func add(x float64, y float64) float64 {
+	return x + y
+}
+
+func saysum() {
+	num1 := 365.0
+	num2 := 213.0
+	fmt.Println("La suma de", num1, "y", num2, "da", add(num1, num2))
+}
+
 func main() {
 	sayhello()
 	saytime()
 	saysqrt()
 	sayrandomnumber()
+	saysum()
 }
