@@ -63,7 +63,6 @@ func (c *campaign) fillRate3() uint32 {
 }
 
 func main() {
-	test()
 	/*sayhello()
 	saytime()
 	saysqrt()
@@ -76,7 +75,7 @@ func main() {
 		permalink:    12345678,
 		impressions:  1234212,
 		requests:     2468424,
-		campaignName: "ADman Media Campaign"}
+		campaignName: "Test Campaign"}
 
 	fmt.Println(fillRate(aCampaign.impressions, aCampaign.requests))
 
